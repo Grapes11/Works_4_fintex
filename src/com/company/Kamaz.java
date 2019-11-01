@@ -1,36 +1,51 @@
 package com.company;
 
 public class Kamaz extends Trucks {
-    Kamaz()
-    {
+    /**
+     * Максимальная передача.
+     */
+    private static final int MAX_GEAR = 5;
+    Kamaz() {
         super();
-        mark="Камаз";
+        mark = "Камаз";
         System.out.println("Вы выбрали Камаз");
     }
 
-    public void honking_machine ()
-    {
+    /**
+     * Гудок.
+     */
+    public void honkingMachine() {
         System.out.println("Биииииип");
     }
-    public void gear_shift (String direction)
-    {
-        if (direction.equals("up"))
-        {
-            if (gear<5)
-                gear=gear+1;
-            else System.out.println("Больше передач нет");
-        }
-        else if (direction.equals("down"))
-        {
-            if (gear>=1)
-                gear=gear-1;
-            else System.out.println("Ниже некуда, ты и так на нейтралке, советую включить первую");
+
+    /**
+     * @param direction
+     * Переключение передачи.
+     */
+    public void gearShift(final String direction) {
+        if (direction.equals("up")) {
+            if (gear < MAX_GEAR) {
+                gear = gear + 1;
+            } else {
+                System.out.println("Больше передач нет");
+            }
+        } else if (direction.equals("down")) {
+            if (gear >= 1) {
+                gear = gear - 1;
+            } else {
+                System.out.println("Ниже некуда,"
+                        + " ты и так на нейтралке,"
+                        + " советую включить первую");
+            }
         }
 
-        System.out.println("Передача "+gear);
+        System.out.println("Передача " + gear);
     }
-    public void start_the_car()
-    {
+
+    /**
+     * Заведение грузовика.
+     */
+    public void startTheCar() {
         System.out.println("Трррррр-Тррррр");
     }
 }

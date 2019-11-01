@@ -1,15 +1,15 @@
 package com.company;
 
-public abstract class Motorcycles implements Vehicle {
+public abstract class PassengerCar implements Vehicle {
     /**
-     * включенная передача.
+     * Включенная передача.
      */
     int gear;
     /**
-     * Марка мотоцикла.
+     * Марка машины.
      */
     String mark;
-    Motorcycles() {
+    PassengerCar() {
         gear = 0;
     }
 
@@ -17,56 +17,55 @@ public abstract class Motorcycles implements Vehicle {
      * Движение вперед.
      */
     public void moveForward() {
-        System.out.println("Мотоцикл едет вперед");
+        System.out.println("Машина едет вперед");
     }
 
     /**
      * Движение назад.
      */
     public void moveBackward() {
-        System.out.println("Мотоцикл едет назад");
+        System.out.println("Машина едет назад");
     }
 
     /**
-     * Поврот налево.
+     * Поворот налево.
      */
     public void turnLeft() {
-        System.out.println("Мотоцикл повернула налево");
+        System.out.println("Машина повернула налево");
     }
 
     /**
      * Поворот направо.
      */
     public void turnRight() {
-        System.out.println("Мотоцикл"
-                + " повернула направо");
+        System.out.println("Машина повернула направо");
     }
 
     /**
      * Разворот.
      */
     public void turnAround() {
-        System.out.println("Мотоцикл развернулась");
+        System.out.println("Машина развернулась");
     }
 
     /**
      * Остановка.
      */
     public void stop() {
-        System.out.println("Мотоцикл остановилась");
+        System.out.println("Машина остановилась");
     }
 
     /**
      * @param direction
-     * Включение поворотника.
+     * Включить поворотник.
      */
     public void includeTurnSignal(final String direction) {
         if (direction.equals("налево")) {
-            System.out.println("Мотоцикл соберается"
+            System.out.println("Машина соберается"
                     + " повернуть налево");
         }
         if (direction.equals("направо")) {
-            System.out.println("Мотоцикл соберается"
+            System.out.println("Машина соберается"
                     + " повернуть направо");
         }
     }
@@ -78,12 +77,14 @@ public abstract class Motorcycles implements Vehicle {
 
     /**
      * @param direction
-     * Перключение передачи.
+     * Перключение передач.
      */
     public abstract void gearShift(String direction);
 
     /**
-     * Заведение мотоцикла.
+     * Заведение машины.
      */
     public abstract void startTheCar();
+
 }
+

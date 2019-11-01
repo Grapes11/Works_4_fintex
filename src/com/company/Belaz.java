@@ -1,23 +1,32 @@
 package com.company;
 
 public class Belaz extends Trucks {
-    Belaz()
-    {
+    Belaz() {
         super();
-        mark="Белаз";
-        System.out.println("Вы выбрали Белаз, ток не раздавите никого)");
+        mark = "Белаз";
+        System.out.println("Вы выбрали Белаз,"
+                + " ток не раздавите никого)");
     }
 
-    public void honking_machine ()
-    {
+    /**
+     * Гудок.
+     */
+    public void honkingMachine() {
         System.out.println("БИИИИИП-БИИИИИП");
     }
-    public void gear_shift (String direction)
-    {
+
+    /**
+     * @param direction
+     * Перключение передач.
+     */
+    public void gearShift(final String direction) {
         System.out.println("Езжай на первой");
     }
-    public void start_the_car()
-    {
+
+    /**
+     * Заведение грузовика.
+     */
+    public void startTheCar() {
         System.out.println("ТРРРРР-ВРРРР");
     }
 }

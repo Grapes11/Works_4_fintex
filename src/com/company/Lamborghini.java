@@ -1,36 +1,55 @@
 package com.company;
 
-public class Lamborghini extends Passenger_car {
-    Lamborghini()
-    {
+public class Lamborghini extends PassengerCar {
+    /**
+     * Год выпуска машины.
+     */
+    private static final int YEAR = 2015;
+    Lamborghini() {
         super();
-        mark="Ламборджини";
+        mark = "Ламборджини";
         System.out.println("Вы выбрали ламборджини");
-        Model l = new Model(2015, "Крайсный");
-        System.out.println("год выпуска: "+l.year+" цвет: "+l.color);
+        Model l = new Model(YEAR, "Красный");
+        System.out.println("год выпуска: " + l.year
+                + " цвет: " + l.color);
     }
 
-    public void honking_machine ()
-    {
+    /**
+     * Гудок.
+     */
+    public void honkingMachine() {
         System.out.println("Бип-бип-бип");
     }
-    public void gear_shift (String direction)
-    {
-        System.out.println("У машины автомат, что ты собрался переключать?");
-    }
-    public void start_the_car()
-    {
-        System.out.println("Прекрасные звуки движка...завелась");
+
+    /**
+     * @param direction
+     * Переключение передач.
+     */
+    public void gearShift(final String direction) {
+        System.out.println("У машины автомат,"
+                + " что ты собрался переключать?");
     }
 
-    private class Model
-    {
+    /**
+     * Заведение машины.
+     */
+    public void startTheCar() {
+        System.out.println("Прекрасные звуки"
+                + " движка...завелась");
+    }
+
+    private final class Model {
+        /**
+         * год выпуска.
+         */
         private int year;
-        private String  color;
-        private Model (int number, String color)
-        {
+        /**
+         * цвет машины.
+         */
+        private String color;
+        private Model(final int number, final String colorr) {
             this.year = number;
-            this.color = color;
+            this.color = colorr;
         }
     }
 }

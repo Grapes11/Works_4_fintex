@@ -1,39 +1,55 @@
 package com.company;
 
-public class Autovaz extends Passenger_car {
+public class Autovaz extends PassengerCar {
+    /**
+     *
+     * максимальное уоличество
+     * передач у Автоваза
+     */
+    private static final int MAX_GEAR = 5;
 
-    Autovaz()
-    {
+    Autovaz() {
         super();
-        mark="Автоваз";
+        mark = "Автоваз";
         System.out.println("Вы выбрали автоваз");
     }
 
-    public void honking_machine ()
-    {
+    /**
+     * Гудок.
+     */
+    public void honkingMachine() {
         System.out.println("Бип");
     }
 
-
-    public void gear_shift (String direction)
-    {
-        if (direction.equals("up"))
-        {
-            if (gear<6)
-            gear=gear+1;
-            else System.out.println("Больше передач нет");
+    /**
+     * @param direction
+     * Перключение передач.
+     */
+    public void gearShift(final String direction) {
+        if (direction.equals("up")) {
+            if (gear < MAX_GEAR) {
+                gear = gear + 1;
+            } else {
+                System.out.println("Больше передач нет");
+            }
+        } else if (direction.equals("down")) {
+                if (gear >= 1) {
+            gear = gear - 1;
+        } else {
+            System.out.println("Ниже некуда,"
+                    + " ты и так на нейтралке,"
+                    + " советую включить первую");
         }
-        else if (direction.equals("down"))
-        {
-            if (gear>=1)
-                gear=gear-1;
-            else System.out.println("Ниже некуда, ты и так на нейтралке, советую включить первую");
         }
-
-        System.out.println("Передача "+gear);
+        System.out.println("Передача " + gear);
     }
-    public void start_the_car()
-    {
-        System.out.println("Тр-тр-тр, не заводится, попробуем снова... Тр-тр-тр, фух, завелась");
+
+    /**
+     * Заведение машины.
+     */
+    public void startTheCar() {
+        System.out.println("Тр-тр-тр, не заводится,"
+                + " попробуем снова..."
+                + " Тр-тр-тр, фух, завелась");
     }
 }

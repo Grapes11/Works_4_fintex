@@ -1,26 +1,27 @@
 package com.company;
 
-public class Ural extends Trucks {
+public class HarleyDavidson extends Motorcycles {
     /**
      * Максимальная передача.
      */
     private static final int MAX_GEAR = 5;
-    Ural() {
+    HarleyDavidson() {
         super();
-        mark = "Урал";
-        System.out.println("Вы выбрали Урал");
+        mark = "Harley davidson";
+        System.out.println("Вы выбрали Харлей,"
+                + " классика");
     }
 
     /**
      * Гудок.
      */
     public void honkingMachine() {
-        System.out.println("Бии-Биип");
+        System.out.println("Пип-пип-пип");
     }
 
     /**
      * @param direction
-     * Переключение передачи.
+     * Переключение передач.
      */
     public void gearShift(final String direction) {
         if (direction.equals("up")) {
@@ -33,9 +34,9 @@ public class Ural extends Trucks {
             if (gear >= 1) {
                 gear = gear - 1;
             } else {
-                System.out.println("Ниже некуда, ты и так"
-                        + " на нейтралке, советую"
-                        + " включить первую");
+                System.out.println("Ниже некуда,"
+                        + " ты и так на нейтралке,"
+                        + " советую включить первую");
             }
         }
 
@@ -43,9 +44,9 @@ public class Ural extends Trucks {
     }
 
     /**
-     * Заведение грузовика.
+     * Заведение мотоцикла.
      */
     public void startTheCar() {
-        System.out.println("Трр-Трр");
+        System.out.println("Вруум-вррр-вррр");
     }
 }

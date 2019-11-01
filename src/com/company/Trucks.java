@@ -1,45 +1,89 @@
 package com.company;
 
 public abstract class Trucks implements Vehicle {
+    /**
+     * включенная передача.
+     */
     int gear;
+    /**
+     * марка грузовика.
+     */
     String mark;
-    Trucks()
-    {
-        gear=0;
+    Trucks() {
+        gear = 0;
     }
 
-    public void move_forward ()
-    {
+    /**
+     * Движение вперед.
+     */
+    public void moveForward() {
         System.out.println("Грузовик едет вперед");
     }
-    public void move_backward ()
-    {
+
+    /**
+     * Движение назад.
+     */
+    public void moveBackward() {
         System.out.println("Грузовик едет назад");
     }
-    public void turn_left ()
-    {
+
+    /**
+     * Поворот налево.
+     */
+    public void turnLeft() {
         System.out.println("Грузовик повернула налево");
     }
-    public void turn_right ()
-    {
-        System.out.println("Грузовик повернула направо");
+
+    /**
+     * Поворот направо.
+     */
+    public void turnRight() {
+        System.out.println("Грузовик повернула"
+                + " направо");
     }
-    public void turn_around ()
-    {
+
+    /**
+     * Разворот.
+     */
+    public void turnAround() {
         System.out.println("Грузовик развернулась");
     }
-    public void stop ()
-    {
+
+    /**
+     * Остановка.
+     */
+    public void stop() {
         System.out.println("Грузовик остановилась");
     }
-    public void include_turn_signal(String direction)
-    {
-        if (direction.equals("налево"))
-            System.out.println("Грузовик соберается повернуть налево");
-        if (direction.equals("направо"))
-            System.out.println("Грузовик соберается повернуть направо");
+
+    /**
+     * @param direction
+     * Включение поворотника.
+     */
+    public void includeTurnSignal(final String direction) {
+        if (direction.equals("налево")) {
+            System.out.println("Грузовик соберается"
+                    + " повернуть налево");
+        }
+        if (direction.equals("направо")) {
+            System.out.println("Грузовик соберается"
+                    + " повернуть направо");
+        }
     }
-    public abstract void honking_machine ();
-    public abstract void gear_shift (String direction);
-    public abstract void start_the_car();
+
+    /**
+     * Гудок.
+     */
+    public abstract void honkingMachine();
+
+    /**
+     * @param direction
+     * Переключение передачи.
+     */
+    public abstract void gearShift(String direction);
+
+    /**
+     * Заведение грузовика.
+     */
+    public abstract void startTheCar();
 }

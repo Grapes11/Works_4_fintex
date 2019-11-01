@@ -1,23 +1,33 @@
 package com.company;
 
-public class Mercedes extends Passenger_car {
-   Mercedes()
-    {
+public class Mercedes extends PassengerCar {
+   Mercedes() {
         super();
-        mark="Мерседес";
+        mark = "Мерседес";
         System.out.println("Вы выбрали мерседес");
     }
 
-    public void honking_machine ()
-    {
+    /**
+     * Гудок.
+     */
+    public void honkingMachine() {
         System.out.println("Бип-Бип");
     }
-    public void gear_shift (String direction)
-    {
-        System.out.println("У машины автомат, он сам переключит передачу");
+
+    /**
+     * @param direction
+     * Перключение передач.
+     */
+    public void gearShift(final String direction) {
+        System.out.println("У машины автомат,"
+                + " он сам переключит передачу");
     }
-    public void start_the_car()
-    {
-        System.out.println("Почти бесшумный заводящийся движок");
+
+    /**
+     * Заведение машины.
+     */
+    public void startTheCar() {
+        System.out.println("Почти бесшумны"
+                + " заводящийся движок");
     }
 }

@@ -1,23 +1,32 @@
 package com.company;
 
 public class Honda extends Motorcycles {
-    Honda()
-    {
+    Honda() {
         super();
-        mark="Honda";
-        System.out.println("Вы выбрали Honda, смотрю любите погонять?)");
+        mark = "Honda";
+        System.out.println("Вы выбрали Honda,"
+                + " смотрю любите погонять?)");
     }
 
-    public void honking_machine ()
-    {
+    /**
+     * Гудок.
+     */
+    public void honkingMachine() {
         System.out.println("Пип-пип");
     }
-    public void gear_shift (String direction)
-    {
+
+    /**
+     * @param direction
+     * Переключение передачи.
+     */
+    public void gearShift(final String direction) {
         System.out.println("АКПП все сделает за тебя");
     }
-    public void start_the_car()
-    {
+
+    /**
+     * Заведение мотоцикла.
+     */
+    public void startTheCar() {
         System.out.println("Вруум-вруум");
     }
 }
